@@ -3,17 +3,36 @@
     src: url('fonts/7seg_clock.ttf') format('truetype');
 }
 
-#newfont{
-    font-family: '7seg Clock';
-    }
+body {
+    margin: 0;
+    overflow: hidden;
+}
 
-.clock {
-    text-align: center;
-    margin-top: 10vh; /* Adjust margin as needed */
+#video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.clock-container {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    padding: 20px;
+    color: #00ff3c;
+    background-color: rgba(0, 0, 0, 0.223);
+    font-family: '7seg Clock', sans-serif;
 }
 
 #time {
-    font-size: 4vw; /* Responsive font size based on viewport width */
-    color: #000000;
-    font-family: '7seg Clock', sans-serif;
+    font-size: 4vw;
+}
+
+#date {
+    font-size: 2vw;
+    margin-top: 10px;
 }
