@@ -1,0 +1,19 @@
+@font-face {
+    font-family: '7seg Clock';
+    src: url('fonts/7seg_clock.ttf') format('truetype');
+}
+
+#newfont{
+    font-family: '7seg Clock';
+    }
+
+.clock {
+    text-align: center;
+    margin-top: 10vh; /* Adjust margin as needed */
+}
+
+#time {
+    font-size: 4vw; /* Responsive font size based on viewport width */
+    color: #000000;
+    font-family: '7seg Clock', sans-serif;
+}
