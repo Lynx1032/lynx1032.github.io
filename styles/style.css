@@ -22,8 +22,7 @@ body {
     position: fixed;
     bottom: 0;
     right: 0;
-    padding: 20px;
-    color: #00ff3c;
+    padding: 5px;
     background-color: rgba(0, 0, 0, 0.178);
     backdrop-filter: blur(5px);
     font-family: '7seg Clock', sans-serif;
@@ -31,10 +30,11 @@ body {
 }
 
 #time {
-    font-size: 4vw;
+    color: rgb(0, 255, 42);
+    padding: 5px;
 }
 
 #date {
-    font-size: 2vw;
-    margin-top: 10px;
+    color: rgb(0, 255, 42);
+    padding: 5px;
 }
