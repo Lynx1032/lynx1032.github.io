@@ -2,14 +2,18 @@ function updateTime() {
   var currentTime = new Date();
   var hours = currentTime.getHours();
   var minutes = currentTime.getMinutes();
-  var seconds = currentTime.getSeconds();
+  //var seconds = currentTime.getSeconds();
+  var milisec = currentTime.getMilliseconds();
 
   hours = (hours < 10 ? "0" : "") + hours;
   minutes = (minutes < 10 ? "0" : "") + minutes;
-  seconds = (seconds < 10 ? "0" : "") + seconds;
-
-  var timeString = hours + ":" + minutes + ":" + seconds;
-  document.getElementById("time").innerHTML = timeString;
+  //seconds = (seconds < 10 ? "0" : "") + seconds;
+  
+  if (milisec <= 500) {
+    document.getElementById("time").innerHTML = hours + ":" + minutes;
+  } else {
+    document.getElementById("time").innerHTML = hours + " " + minutes;
+  } 
 }
 
 function updateDate() {
@@ -28,35 +32,32 @@ function updateDate() {
 function adjustTextSize() {
   var viewportWidth = window.innerWidth || document.documentElement.clientWidth;
   var viewportHeight = window.innerHeight || document.documentElement.clientHeight;
+  
+  var timeElement = document.getElementById("time");
+  var dateElement = document.getElementById("date");
 
   if ((viewportHeight <= 2160) && (viewportHeight > 1440) && (viewportHeight < viewportWidth)) {
-    var textTimeElement = document.getElementById("time");
-    textTimeElement.style.fontSize = "6vw";
-    textTimeElement.style.textAlign = "right";
+    timeElement.style.fontSize = "6vw";
+    timeElement.style.textAlign = "right";
 
-    var textDateElement = document.getElementById("date");
-    textDateElement.style.fontSize = "4vw";
-    textDateElement.style.textAlign = "right";
+    dateElement.style.fontSize = "4vw";
+    dateElement.style.textAlign = "right";
   } else 
   
   if ((viewportHeight <= 1440) && (viewportHeight > 1080) && (viewportHeight < viewportWidth)) {
-    var textTimeElement = document.getElementById("time");
-    textTimeElement.style.fontSize = "5vw";
-    textTimeElement.style.textAlign = "right";
+    timeElement.style.fontSize = "5vw";
+    timeElement.style.textAlign = "right";
 
-    var textDateElement = document.getElementById("date");
-    textDateElement.style.fontSize = "3vw";
-    textDateElement.style.textAlign = "right";
+    dateElement.style.fontSize = "3vw";
+    dateElement.style.textAlign = "right";
   } else
 
   if ((viewportHeight <= 1080) && (viewportHeight < viewportWidth)) {
-    var textTimeElement = document.getElementById("time");
-    textTimeElement.style.fontSize = "4vw";
-    textTimeElement.style.textAlign = "right";
+    timeElement.style.fontSize = "4vw";
+    timeElement.style.textAlign = "right";
 
-    var textDateElement = document.getElementById("date");
-    textDateElement.style.fontSize = "2vw";
-    textDateElement.style.textAlign = "right";
+    dateElement.style.fontSize = "2vw";
+    dateElement.style.textAlign = "right";
   } else 
 
   if (viewportHeight >= viewportWidth) {
@@ -67,12 +68,11 @@ function adjustTextSize() {
     //timeDateContainerElement.style.justifyContent = "center";
     //timeDateContainerElement.style.alignItems = "center";
 
-    var textTimeElement = document.getElementById("time");
-    textTimeElement.style.fontSize = "7vw";
-    textTimeElement.style.textAlign = "center";
-    var textDateElement = document.getElementById("date");
-    textDateElement.style.fontSize = "4vw";
-    textDateElement.style.textAlign = "center";
+    timeElement.style.fontSize = "7vw";
+    timeElement.style.textAlign = "center";
+
+    dateElement.style.fontSize = "4vw";
+    dateElement.style.textAlign = "center";
   }
 }
 
@@ -114,7 +114,7 @@ function loadRandomVideo() {
   videoBackground.src = videoPaths;
 }
 
-setInterval(updateTime, 1000);
-setInterval(updateDate, 1000);
+setInterval(updateTime, 50);
+setInterval(updateDate, 50);
 loadRandomVideo();
 adjustTextSize();
