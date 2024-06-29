@@ -38,26 +38,26 @@ function adjustTextSize() {
 
   if ((viewportHeight <= 2160) && (viewportHeight > 1440) && (viewportHeight < viewportWidth)) {
     timeElement.style.fontSize = "6vw";
-    timeElement.style.textAlign = "right";
+    timeElement.style.textAlign = "center";
 
     dateElement.style.fontSize = "4vw";
-    dateElement.style.textAlign = "right";
+    dateElement.style.textAlign = "center";
   } else 
   
   if ((viewportHeight <= 1440) && (viewportHeight > 1080) && (viewportHeight < viewportWidth)) {
     timeElement.style.fontSize = "5vw";
-    timeElement.style.textAlign = "right";
+    timeElement.style.textAlign = "center";
 
     dateElement.style.fontSize = "3vw";
-    dateElement.style.textAlign = "right";
+    dateElement.style.textAlign = "center";
   } else
 
   if ((viewportHeight <= 1080) && (viewportHeight < viewportWidth)) {
     timeElement.style.fontSize = "4vw";
-    timeElement.style.textAlign = "right";
+    timeElement.style.textAlign = "center";
 
     dateElement.style.fontSize = "2vw";
-    dateElement.style.textAlign = "right";
+    dateElement.style.textAlign = "center";
   } else 
 
   if (viewportHeight >= viewportWidth) {
@@ -102,7 +102,12 @@ function loadRandomVideo() {
     var videoBackground = document.getElementById("video-background");
     var videoFolder = "./background_video_portrait/";
     var videoFiles = [
-      "2730071537.mp4"
+      "1990772497.mp4",
+      "2383824380.mp4",
+      "2712114224.mp4",
+      "2730071537.mp4",
+      "2811117418.mp4",
+      "2867637516.mp4"
       // Add more video as needed
     ];
   }
