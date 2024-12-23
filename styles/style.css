@@ -1,1 +1,31 @@
-@font-face{font-family:"7seg Clock";src:url(fonts/7seg_clock.ttf) format("truetype")}body{margin:0;overflow:hidden}#video-background{height:100%;left:0;object-fit:cover;position:fixed;top:0;width:100%;z-index:-1}.clock-container{backdrop-filter:blur(5px);background-color:rgba(0,0,0,.178);bottom:0;font-family:"7seg Clock",sans-serif;padding:5px;position:fixed;right:0;text-shadow:-1px -1px 0 #000,1px -1px 0 #000,-1px 1px 0 #000,1px 1px 0 #000}#date,#time{color:#00ff2a;padding:5px}
+@font-face {
+    font-family: "7seg Clock";
+    src: url(fonts/7seg_clock.ttf) format("truetype");
+}
+body {
+    margin: 0;
+    overflow: hidden;
+}
+#video-background {
+    height: 100%;
+    left: 0;
+    object-fit: cover;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: -1;
+}
+.clock-container {
+    backdrop-filter: blur(5px);
+    background-color: rgba(0, 0, 0, .178);
+    bottom: 0;
+    font-family: "7seg Clock", sans-serif;
+    padding: 5px;
+    position: fixed;
+    right: 0;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+#date, #time {
+    color: #00ff2a;
+    padding: 5px;
+}
