@@ -1,6 +1,6 @@
 @font-face {
-    font-family: "7seg Clock";
-    src: url(fonts/7seg_clock.ttf) format("truetype");
+    font-family: "Comic Sans MS";
+    src: url(fonts/comic.ttf) format("truetype");
 }
 body {
     margin: 0;
@@ -19,7 +19,7 @@ body {
     backdrop-filter: blur(5px);
     background-color: rgba(0, 0, 0, .178);
     bottom: 0;
-    font-family: "7seg Clock", sans-serif;
+    font-family: "Comic Sans MS", sans-serif;
     padding: 5px;
     position: fixed;
     right: 0;
