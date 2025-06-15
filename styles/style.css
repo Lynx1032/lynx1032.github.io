@@ -24,6 +24,7 @@ body {
     position: fixed;
     right: 0;
     text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    border-radius: 20px;
 }
 #date, #time {
     color: #00ff2a;

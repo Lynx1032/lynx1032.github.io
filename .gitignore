@@ -2758,3 +2758,5 @@ package-lock.json
 package.json
 scripts_src/script.js
 styles_src/style.css
+scripts/generate_videos_json.py
+.gitignore
