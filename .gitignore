@@ -2760,3 +2760,5 @@ scripts_src/script.js
 styles_src/style.css
 scripts/generate_videos_json.py
 .gitignore
+video_process/landscape/process_video.py
+video_process/portrait/process_video.py
